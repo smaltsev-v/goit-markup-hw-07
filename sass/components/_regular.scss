@@ -1,0 +1,34 @@
+.Regular {
+  display: flex;
+}
+
+.Regular-customers {
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+.Regular-customers {
+  &:hover {
+    color: $accent-color;
+  }
+}
+
+.Regular-customers__link {
+  display: block;
+  border: 1px solid $Regular;
+  padding: 16px 32px;
+  border-radius: 4px;
+  fill: $Regular;
+  transition-property: fill, border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.Regular-customers__link {
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+    border: 1px solid $accent-color;
+    outline: none;
+  }
+}
