@@ -3,16 +3,16 @@
   align-items: baseline;
 }
 
-.footer-link {
+.footer-box {
   justify-content: start;
   margin-left: 70px;
 }
 
-.footer-link__social {
+.footer-box__list {
   display: flex;
 }
 
-.footer-link__titel {
+.footer-box__titel {
   font-weight: bold;
   font-size: 14px;
   line-height: 1.14;
@@ -22,12 +22,12 @@
   margin-bottom: 20px;
 }
 
-.social-footer {
+.footer-box__item {
   &:not(:first-child) {
     margin-left: 10px;
   }
 }
-.social-footer__link {
+.footer-box__link {
   padding: 12px;
   display: block;
   width: 44px;
@@ -36,13 +36,14 @@
   color: #fff;
   background-color: rgba(255, 255, 255, 0.1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.social-footer__link {
   &:hover,
   &:focus {
     background-color: $accent-color;
     outline: none;
   }
+}
+.footer-box__icon {
+  fill: currentColor;
 }
 
 .footer {

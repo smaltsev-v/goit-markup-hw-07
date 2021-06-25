@@ -57,35 +57,35 @@
         <div class="container">
           <h1 class="hidden-header">Портфолио</h1>
           <ul class="button-portfolio">
-            <li class="button-portfolio__list">
+            <li class="button-portfolio__item">
               <input
                 type="button"
                 class="button-portfolio__filters"
                 value=" Все"
               />
             </li>
-            <li class="button-portfolio__list">
+            <li class="button-portfolio__item">
               <input
                 type="button"
                 class="button-portfolio__filters"
                 value=" Веб-сайты"
               />
             </li>
-            <li class="button-portfolio__list">
+            <li class="button-portfolio__item">
               <input
                 type="button"
                 class="button-portfolio__filters"
                 value=" Приложения"
               />
             </li>
-            <li class="button-portfolio__list">
+            <li class="button-portfolio__item">
               <input
                 type="button"
                 class="button-portfolio__filters"
                 value=" Дизайн"
               />
             </li>
-            <li class="button-portfolio__list">
+            <li class="button-portfolio__item">
               <input
                 type="button"
                 class="button-portfolio__filters"
@@ -111,9 +111,9 @@
                     alt="ноутбук с партфолио"
                   />
                 </div>
-                <div class="card-content">
-                  <h2 class="card-content__work">Технокряк</h2>
-                  <p class="card-content__title">Веб-сайт</p>
+                <div class="projects__box">
+                  <h2 class="projects-box__description">Технокряк</h2>
+                  <p class="projects-box__title">Веб-сайт</p>
                 </div>
               </article>
             </li>
@@ -135,11 +135,11 @@
                     alt="баскетболисты с мячом"
                   />
                 </div>
-                <div class="card-content">
-                  <h2 class="card-content__work">
+                <div class="projects__box">
+                  <h2 class="projects-box__description">
                     Постер New Orlean vs Golden Star
                   </h2>
-                  <p class="card-content__title">Дизайн</p>
+                  <p class="projects-box__title">Дизайн</p>
                 </div>
               </article>
             </li>
@@ -161,9 +161,9 @@
                     alt="логотип"
                   />
                 </div>
-                <div class="card-content">
-                  <h2 class="card-content__work">Ресторан Seafood</h2>
-                  <p class="card-content__title">Приложение</p>
+                <div class="projects__box">
+                  <h2 class="projects-box__description">Ресторан Seafood</h2>
+                  <p class="projects-box__title">Приложение</p>
                 </div>
               </article>
             </li>
@@ -184,9 +184,9 @@
                     alt="наушники"
                   />
                 </div>
-                <div class="card-content">
-                  <h2 class="card-content__work">Проект Prime</h2>
-                  <p class="card-content__title">Маркетинг</p>
+                <div class="projects__box">
+                  <h2 class="projects-box__description">Проект Prime</h2>
+                  <p class="projects-box__title">Маркетинг</p>
                 </div>
               </article>
             </li>
@@ -207,9 +207,9 @@
                     alt="две коробки"
                   />
                 </div>
-                <div class="card-content">
-                  <h2 class="card-content__work">Проект Boxes</h2>
-                  <p class="card-content__title">Приложение</p>
+                <div class="projects__box">
+                  <h2 class="projects-box__description">Проект Boxes</h2>
+                  <p class="projects-box__title">Приложение</p>
                 </div>
               </article>
             </li>
@@ -230,9 +230,11 @@
                     alt="монитор"
                   />
                 </div>
-                <div class="card-content">
-                  <h2 class="card-content__work">Inspiration has no Borders</h2>
-                  <p class="card-content__title">Веб-сайт</p>
+                <div class="projects__box">
+                  <h2 class="projects-box__description">
+                    Inspiration has no Borders
+                  </h2>
+                  <p class="projects-box__title">Веб-сайт</p>
                 </div>
               </article>
             </li>
@@ -253,9 +255,11 @@
                     alt="журнал"
                   />
                 </div>
-                <div class="card-content">
-                  <h2 class="card-content__work">Издание Limited Edition</h2>
-                  <p class="card-content__title">Дизайн</p>
+                <div class="projects__box">
+                  <h2 class="projects-box__description">
+                    Издание Limited Edition
+                  </h2>
+                  <p class="projects-box__title">Дизайн</p>
                 </div>
               </article>
             </li>
@@ -276,9 +280,9 @@
                     alt="бирка"
                   />
                 </div>
-                <div class="card-content">
-                  <h2 class="card-content__work">Проект LAB</h2>
-                  <p class="card-content__title">Маркетинг</p>
+                <div class="projects__box">
+                  <h2 class="projects-box__description">Проект LAB</h2>
+                  <p class="projects-box__title">Маркетинг</p>
                 </div>
               </article>
             </li>
@@ -300,9 +304,9 @@
                     alt="ноутбук"
                   />
                 </div>
-                <div class="card-content">
-                  <h2 class="card-content__work">Growing Business</h2>
-                  <p class="card-content__title">Приложение</p>
+                <div class="projects__box">
+                  <h2 class="projects-box__description">Growing Business</h2>
+                  <p class="projects-box__title">Приложение</p>
                 </div>
               </article>
             </li>
@@ -313,17 +317,15 @@
 
     <!--футер-->
     <footer class="footer">
-      <div class="container f-section">
+      <div class="container flex-box">
         <div class="footer-addres">
-          <a href="./index.html" class="footer-addres__logo"
-            >Web<span class="footer-addres__title">Studio</span></a
+          <a href="./index.html" class="footer__logo"
+            >Web<span class="footer-logo__title">Studio</span></a
           >
-          <address class="address-content">
-            <p class="address-content__contact">
-              г. Киев, пр-т Леси Украинки, 26
-            </p>
-            <ul class="contact-footer list">
-              <li class="contact-footer__list">
+          <address class="aaddress-box">
+            <p class="address-box__title">г. Киев, пр-т Леси Украинки, 26</p>
+            <ul class="contact-footer__list">
+              <li class="contact-footer__item">
                 <a href="mailto:info@devstudio.com" class="contact-footer__link"
                   >info@devstudio.com</a
                 >
@@ -336,33 +338,33 @@
             </ul>
           </address>
         </div>
-        <div class="footer-link">
-          <h4 class="footer-link__titel">присоединяйтесь</h4>
-          <ul class="footer-link__social">
-            <li class="social-footer">
-              <a href="" class="social-footer__link">
-                <svg class="social-link__icon" width="20" height="20">
+        <div class="footer-box">
+          <h4 class="footer-box__titel">присоединяйтесь</h4>
+          <ul class="footer-box__list">
+            <li class="footer-box__item">
+              <a href="" class="footer-box__link">
+                <svg class="footer-box__icon" width="20" height="20">
                   <use href="./images/icon/icon.svg#icon-instagram"></use>
                 </svg>
               </a>
             </li>
-            <li class="social-footer">
-              <a href="" class="social-footer__link">
-                <svg class="social-link__icon" width="20" height="20">
+            <li class="footer-box__item">
+              <a href="" class="footer-box__link">
+                <svg class="footer-box__icon" width="20" height="20">
                   <use href="./images/icon/icon.svg#icon-twitter"></use>
                 </svg>
               </a>
             </li>
-            <li class="social-footer">
-              <a href="" class="social-footer__link">
-                <svg class="social-link__icon" width="20" height="20">
+            <li class="footer-box__item">
+              <a href="" class="footer-box__link">
+                <svg class="footer-box__icon" width="20" height="20">
                   <use href="./images/icon/icon.svg#icon-facebook"></use>
                 </svg>
               </a>
             </li>
-            <li class="social-footer">
-              <a href="" class="social-footer__link">
-                <svg class="social-link__icon" width="20" height="20">
+            <li class="footer-box__item">
+              <a href="" class="footer-box__link">
+                <svg class="footer-box__icon" width="20" height="20">
                   <use href="./images/icon/icon.svg#icon-linkedin"></use>
                 </svg>
               </a>
