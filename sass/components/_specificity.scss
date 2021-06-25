@@ -21,7 +21,7 @@ img {
   min-width: 100%;
 }
 
-.list {
+li {
   list-style: none;
 }
 
@@ -45,4 +45,8 @@ body {
   font-family: Roboto, Helvetica, sans-serif;
   color: $primaty-text-color;
   background-color: $primary-bg-color;
+}
+
+.hidden-header {
+  display: none;
 }

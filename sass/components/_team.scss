@@ -1,15 +1,12 @@
-.section-team {
+.section__bg {
   background-color: $portfolio-secondary-color;
 }
-.section-team__list {
+.section-team {
   display: flex;
   flex-wrap: wrap;
   margin-left: calc(-1 * 30px);
   margin-top: calc(-1 * 30px);
-}
-
-.section-team {
-  &__list > &__staff {
+  & > &__item {
     flex-basis: calc (100% / 4 -30px);
     margin-left: 30px;
     margin-top: 30px;
@@ -19,8 +16,15 @@
       0px 2px 1px rgba(0, 0, 0, 0.2);
   }
 }
+.staff-box {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.staff {
+  display: block;
+}
 
-.staff-content__team {
+.staff-box__item {
   color: $title-text-color;
   font-weight: 500;
   font-size: 16px;
@@ -29,7 +33,7 @@
   letter-spacing: 0.03em;
   margin-bottom: 10px;
 }
-.staff-content__title {
+.staff-box__description {
   color: $primaty-text-color;
   font-weight: normal;
   font-size: 16px;
@@ -37,11 +41,4 @@
   text-align: center;
   letter-spacing: 0.03em;
   margin-bottom: 16px;
-}
-.staff-content {
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-.staff {
-  display: block;
 }

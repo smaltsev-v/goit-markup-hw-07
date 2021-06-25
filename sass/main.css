@@ -1,11 +1,3 @@
-.feature-header {
-  display: none;
-}
-
-.hidden-header {
-  display: none;
-}
-
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 /*
 Document
@@ -293,7 +285,7 @@ img {
   min-width: 100%;
 }
 
-.list {
+li {
   list-style: none;
 }
 
@@ -321,11 +313,15 @@ body {
   background-color: #ffffff;
 }
 
-.header-br {
+.hidden-header {
+  display: none;
+}
+
+.header {
   border: 1px solid #ececec;
 }
 
-.main-nav__logo {
+.logo {
   color: #2196f3;
   font-family: Raleway, Helvetica, sans-serif;
   font-weight: bold;
@@ -335,7 +331,7 @@ body {
   text-decoration: none;
 }
 
-.main-nav__logo .main-nav__title {
+.logo .logo__title {
   color: #212121;
 }
 
@@ -364,12 +360,6 @@ body {
   margin-left: 93px;
 }
 
-.site-nav__link {
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
-
 .site-nav:active {
   color: #757575;
 }
@@ -379,16 +369,22 @@ body {
   outline: none;
 }
 
-.site-nav__link:active {
-  color: #2196f3;
+.site-nav__link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
-.site-nav__navigation:not(:first-child) {
+.site-nav__link:hover::after, .site-nav__link:focus::after {
+  opacity: 1;
+}
+
+.site-nav__item {
+  position: relative;
+}
+
+.site-nav__item:not(:first-child) {
   margin-left: 50px;
-}
-
-.site-nav__link:active {
-  color: #2196f3;
 }
 
 .site-nav__link {
@@ -402,21 +398,8 @@ body {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.main-contact__link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  color: #757575;
-  text-decoration: none;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.site-nav__navigation {
-  position: relative;
+.site-nav__link:active {
+  color: #2196f3;
 }
 
 .site-nav__link::after {
@@ -432,15 +415,11 @@ body {
   opacity: 0;
 }
 
-.site-nav__link:hover::after, .site-nav__link:focus::after {
-  opacity: 1;
-}
-
-.currnet {
+.current {
   color: #2196f3;
 }
 
-.currnet::after {
+.current::after {
   position: absolute;
   display: inline-block;
   content: '';
@@ -451,6 +430,19 @@ body {
   bottom: 0;
   background-color: #2196f3;
   opacity: 1;
+}
+
+.main-contact__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #757575;
+  text-decoration: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .main-contact {
@@ -468,8 +460,16 @@ body {
           align-items: center;
 }
 
-.main-contact__list + .main-contact__list {
+.main-contact__item + .main-contact__item {
   margin-left: 50px;
+}
+
+.main-contact__link:hover > .main-contact__icon {
+  fill: #2196f3;
+}
+
+.main-contact__link:focus > .main-contact__icon {
+  fill: #2196f3;
 }
 
 .main-contact__icon {
@@ -480,14 +480,6 @@ body {
 .main-contact__link:hover, .main-contact__link:focus {
   color: #2196f3;
   outline: none;
-}
-
-.main-contact__link:hover > .main-contact__icon {
-  fill: #2196f3;
-}
-
-.main-contact__link:focus > .main-contact__icon {
-  fill: #2196f3;
 }
 
 .hero {
@@ -543,10 +535,6 @@ body {
   letter-spacing: 0.03em;
 }
 
-.feature-header {
-  display: none;
-}
-
 .feature-list {
   color: #212121;
 }
@@ -561,11 +549,11 @@ body {
   display: flex;
 }
 
-.feature-list__content:not(:first-child) {
+.feature-list__item:not(:first-child) {
   margin-left: 30px;
 }
 
-.feature-list__icon {
+.feature-list__box {
   background-color: #f5f4fa;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -600,7 +588,7 @@ body {
       flex-wrap: wrap;
 }
 
-.ourwork-list > .ourwork-list__photo {
+.ourwork-list > .ourwork-list__item {
   -ms-flex-preferred-size: calc 100%/3 -30px;
       flex-basis: calc 100%/3 -30px;
   margin-top: 30px;
@@ -626,11 +614,11 @@ body {
   color: #ffffff;
 }
 
-.section-team {
+.section__bg {
   background-color: #f5f4fa;
 }
 
-.section-team__list {
+.section-team {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -640,7 +628,7 @@ body {
   margin-top: calc(-1 * 30px);
 }
 
-.section-team__list > .section-team__staff {
+.section-team > .section-team__item {
   -ms-flex-preferred-size: calc 100%/4 -30px;
       flex-basis: calc 100%/4 -30px;
   margin-left: 30px;
@@ -651,7 +639,16 @@ body {
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-.staff-content__team {
+.staff-box {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.staff {
+  display: block;
+}
+
+.staff-box__item {
   color: #212121;
   font-weight: 500;
   font-size: 16px;
@@ -661,7 +658,7 @@ body {
   margin-bottom: 10px;
 }
 
-.staff-content__title {
+.staff-box__description {
   color: #757575;
   font-weight: normal;
   font-size: 16px;
@@ -669,15 +666,6 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
   margin-bottom: 16px;
-}
-
-.staff-content {
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-
-.staff {
-  display: block;
 }
 
 .social {
@@ -689,11 +677,11 @@ body {
   display: flex;
 }
 
-.social-link:not(:first-child) {
+.social-item:not(:first-child) {
   margin-left: 10px;
 }
 
-.social-link__content {
+.social-item__link {
   padding: 12px;
   display: block;
   width: 44px;
@@ -705,31 +693,31 @@ body {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social-link__content:hover, .social-link__content:focus {
+.social-item__link:hover, .social-item__link:focus {
   background-color: #2196f3;
   color: #fff;
   outline: none;
 }
 
-.social-link__icon {
+.social__icon {
   fill: currentColor;
 }
 
-.Regular {
+.regular {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.Regular-customers:not(:last-child) {
+.regular-item:not(:last-child) {
   margin-right: 30px;
 }
 
-.Regular-customers:hover {
+.regular-item:hover {
   color: #2196f3;
 }
 
-.Regular-customers__link {
+.regular-item__link {
   display: block;
   border: 1px solid #afb1b8;
   padding: 16px 32px;
@@ -743,13 +731,13 @@ body {
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.Regular-customers__link:hover, .Regular-customers__link:focus {
+.regular-item__link:hover, .regular-item__link:focus {
   fill: #2196f3;
   border: 1px solid #2196f3;
   outline: none;
 }
 
-.f-section {
+.flex-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
